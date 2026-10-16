@@ -1,0 +1,17 @@
+Python virtual environment
+.venv/
+venv/
+
+Python cache
+pycache/
+*.pyc
+
+Environment variables and secrets
+.env
+.env.*
+
+VS Code local settings
+.vscode/
+
+Test cache
+.pytest_cache/
