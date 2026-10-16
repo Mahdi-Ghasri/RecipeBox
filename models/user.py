@@ -5,6 +5,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from database.connection import Base
 if TYPE_CHECKING:
     from models.user_profile import UserProfile
+from models.recipe import Recipe
 
 
 class User(Base):
@@ -32,5 +33,8 @@ class User(Base):
       uselist=False,
     )
 
+    recipes: Mapped[list["Recipe"]] = relationship(
+      "Recipe", back_populates = "user", 
+    )
     def __repr__(self) -> str:
         return f"User(id={self.id}, email={self.email!r})"
