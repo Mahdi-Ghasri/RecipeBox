@@ -2,6 +2,7 @@ import models
 
 from ui.menu import show_main_menu, get_user_choice
 from ui.users_menu import show_users_menu
+from ui.user_profiles_menu import show_user_profiles_menu
 from ui.categories_menu import show_categories_menu
 from ui.ingredients_menu import show_ingredients_menu
 
@@ -17,13 +18,16 @@ def main():
         elif choice == "1":
             show_users_menu()
 
+        elif choice == "2":
+            show_user_profiles_menu()
+
         elif choice == "3":
             show_categories_menu()
 
         elif choice == "4":
             show_ingredients_menu()
 
-        elif choice in ["2", "5", "6", "7"]:
+        elif choice in ["5", "6", "7"]:
             print("This section will be implemented soon.")
 
         else:
